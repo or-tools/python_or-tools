@@ -1,0 +1,16 @@
+name: Linux
+
+on: [push, pull_request]
+
+jobs:
+  # Building using the github runner environement directly.
+  build:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v3
+    - name: Check python
+      run: python3 --version
+    - name: Install
+      run: python3 -m pip installl -U --user "ortools==9.4.*"
+    - name: Test
+      run: python3 basic_example.py
