@@ -8,7 +8,6 @@ RUN apt-get update -qq \
 python3-dev python3-pip \
 && apt-get clean \
 && rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*
-ENV JAVA_HOME=/usr/lib/jvm/default-java
 
 # Copy project
 FROM env AS devel
