@@ -12,5 +12,24 @@
 [windows_status]: https://github.com/or-tools/python_or-tools/actions/workflows/windows.yml/badge.svg
 [windows_link]: https://github.com/or-tools/python_or-tools/actions/workflows/windows.yml
 
-# python_or-tools
-About Template to consume pypi ortools package
+# Introduction
+Sample project explaining how to use Google OR-Tools in a python project.
+
+# Install ortools
+
+```sh
+python3 -m pip install -U --user ortools
+```
+
+# Run
+
+```sh
+python3 basic_example.py
+```
+
+## Testing
+You can test using the provided Dockerfile
+```sh
+docker build --tag=python_or-tools .
+```
+
