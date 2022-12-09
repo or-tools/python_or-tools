@@ -13,7 +13,7 @@
 [windows_link]: https://github.com/or-tools/python_or-tools/actions/workflows/windows.yml
 
 # Introduction
-Sample project explaining how to use Google OR-Tools in a python project.
+Sample project explaining how to use Google OR-Tools in a Python project.
 
 # Install ortools
 
@@ -29,6 +29,7 @@ python3 basic_example.py
 
 ## Testing
 You can test using the provided Dockerfile
+
 ```sh
 docker build --tag=python_or-tools .
 ```
