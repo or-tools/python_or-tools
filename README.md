@@ -18,7 +18,7 @@ Sample project explaining how to use Google OR-Tools in a Python project.
 # Install ortools
 
 ```sh
-python3 -m pip install -U --user ortools
+python3 -m pip install -U --user "ortools==9.5.*"
 ```
 
 # Run
