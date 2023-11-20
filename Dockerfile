@@ -18,7 +18,7 @@ COPY . .
 
 # Build
 FROM devel AS install
-RUN python3 -m pip install -U --user "ortools==9.5.*"
+RUN python3 -m pip install -U --user "ortools==9.8.*"
 
 # Run test
 FROM install AS test
