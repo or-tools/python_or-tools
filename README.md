@@ -19,19 +19,15 @@ Github-CI:<br>
 
 Sample project explaining how to use Google OR-Tools in a Python project.
 
-# Install ortools
-
 ```sh
-python3 -m pip install -U --user "ortools==9.8.*"
-```
-
-# Run
-
-```sh
-python3 basic_example.py
+python3 -m venv venv
+source venv/bin/activate
+python -m pip install -r requirements.txt
+./basic_example.py
 ```
 
 ## Testing
+
 You can test using the provided Dockerfile
 
 ```sh
