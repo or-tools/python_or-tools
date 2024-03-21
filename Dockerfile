@@ -18,7 +18,7 @@ COPY . .
 
 # Build
 FROM devel AS install
-RUN python3 -m pip install -U --user "ortools==9.8.*"
+RUN python3 -m pip install --user -r requirements.txt
 
 # Run test
 FROM install AS test

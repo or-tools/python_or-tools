@@ -13,6 +13,6 @@ jobs:
       - name: Check python
         run: python3 --version
       - name: Install
-        run: python3 -m pip install -U --user "ortools==9.8.*"
+        run: python3 -m pip install -U --user -r requirements.txt
       - name: Test
         run: python3 basic_example.py
