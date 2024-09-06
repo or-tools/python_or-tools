@@ -20,4 +20,4 @@ jobs:
       - name: Build install image
         run: docker build --target install .
       - name: Test project
-        run: docker build --target test .
+        run: docker build --target run .

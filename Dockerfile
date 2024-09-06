@@ -1,8 +1,8 @@
 # Create a virtual environment with all tools installed
 # ref: https://hub.docker.com/_/ubuntu
-FROM ubuntu:22.04 AS env
+FROM ubuntu:24.04 AS env
+
 # Install system build dependencies
-ENV PATH=/usr/local/bin:$PATH
 RUN apt-get update -qq \
 && DEBIAN_FRONTEND=noninteractive apt-get install -yq \
 python3-dev python3-pip \
@@ -11,15 +11,15 @@ python3-dev python3-pip \
 
 # Copy project
 FROM env AS devel
-RUN useradd -rm -d /home/ubuntu -s /bin/bash -g root -G sudo -u 1001 ubuntu
 USER ubuntu
 WORKDIR /home/ubuntu
-COPY . .
+COPY --chown=ubuntu:ubuntu . .
 
 # Build
 FROM devel AS install
-RUN python3 -m pip install --user -r requirements.txt
+ENV PATH=/home/ubuntu/.local/bin:$PATH
+RUN python3 -m pip install --user --break-system-packages -r requirements.txt
 
 # Run test
-FROM install AS test
+FROM install AS run
 RUN python3 basic_example.py
