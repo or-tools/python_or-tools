@@ -9,5 +9,5 @@ Dockerfile
 README.md
 LICENSE
 
-target/
+venv/
 *.swp
