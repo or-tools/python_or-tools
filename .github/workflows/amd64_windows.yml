@@ -13,7 +13,7 @@ jobs:
     name: Windows•Python
     runs-on: windows-latest
     steps:
-      - uses: actions/checkout@v6
+      - uses: actions/checkout@v7
       - name: Check python
         run: python3 --version
       - name: Install
